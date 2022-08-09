@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Persona {\n  constructor(nombre, apellido, urlFoto, titulo, acercaDe) {\n    this.nombre = nombre;\n    this.urlFoto = urlFoto;\n    this.apellido = apellido;\n    this.acercaDe = acercaDe;\n    this.titulo = titulo;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

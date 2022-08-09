@@ -1,0 +1,17 @@
+.row{
+    background-color: deepskyblue;
+    padding: 20px;
+    padding-top: 2%;
+}
+
+
+h1{
+    display: inline-block;
+    width: auto;
+
+}
+
+
+li{
+    list-style: none;
+}

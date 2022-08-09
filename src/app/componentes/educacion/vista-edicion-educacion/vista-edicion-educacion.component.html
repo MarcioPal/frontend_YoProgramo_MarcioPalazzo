@@ -1,0 +1,52 @@
+
+<div>
+    <h1 style="margin-bottom:2%;">Educación</h1>
+    <button  type="button" class="btnEdicion"  (click)="habilitarEdicion('agregar',true)" (dblclick)="habilitarEdicion('agregar',false)">Añadir</button>
+
+    <form action="" id="agregar">
+        <ul>
+
+         <li><input name="puesto" type="text" value="" id="titulo" placeholder="Titulo"></li>
+         <li><input name="empresa " type="text" value="" id="inst" placeholder="Institucion"></li> 
+         <li><input name="URL" type="text" value="" id="logoedu" placeholder="URL logo institucion" ></li>
+         <li><input type="text" style="width:10ch; text-align: center;" value="" id="inicioEduc" placeholder="Año Inicio">
+         <input type="text" style="width:10ch; text-align: center;" value="" id="finEduc" placeholder="Año Fin" >
+        </li>
+        <div style="padding:0%"><li><input type="text" style=" text-align: center;" value="" id="urlDiploma" placeholder="URL Diploma/Certificado"></div>
+        <textarea value="" id="descripEduc" placeholder="Descripción"></textarea>
+        <li><button  type="button" (click)="agregarEducacion()">Confirmar</button></li>
+
+    </ul>
+    </form>
+        
+    <ul>
+        <li style="margin-bottom:3%;" *ngFor="let educacion of listaEducacion">
+            <div class="col-sm-12 col-md-6 col-lg-6 educItems ">
+                <p class="titulo">Titulo: <b>{{educacion.titulo}}</b></p><br>
+                <p class="institucion">Institucion: {{educacion.institucion}}</p><img src="{{educacion.urlImg}}"><br>
+                <p class="periodo">Periodo: ({{educacion.anioInicio}} - {{educacion.anioFin}})</p><br>
+                <p><a href={{educacion.urlDiploma}}>Ver diploma</a></p><br>
+                <p class="descripcion">Descripción: {{educacion.descripcion}}</p><br>
+            
+            <div style="text-align:center; width: 70%;margin-left: 15%;margin-right: 15%;background-color: aqua;">
+            <button type="button" id=btnEditar{{educacion.id}} class="btnEdicion" (click)="habilitarEdicion(educacion.titulo,true)" (dblclick)="habilitarEdicion(educacion.titulo,false)">Editar</button>
+            <button type="button" id=btnElim{{educacion.id}}  class="btnEdicion" (click)="borrarEducacion(educacion.id)">Eliminar</button>
+            </div>
+            </div>
+
+            <form class="formularios" id={{educacion.titulo}}>
+                <ul>
+                 <li><input type="text" value={{educacion.titulo}} id={{educacion.titulo}}{{educacion.id}} placeholder="Titulo"></li>
+                 <li><input type="text" value={{educacion.institucion}} id={{educacion.institucion}}{{educacion.id}} placeholder ="Institución"></li>
+                 <li><input type="text" value={{educacion.urlImg}} id={{educacion.urlImg}}{{educacion.id}} placeholder="URL logo Institucion"></li>
+                 <li><input type="text" style="width:10ch; text-align: center;" value={{educacion.anioInicio}} id=inicio{{educacion.id}} placeholder="Año Inicio">
+                     <input type="text" style="width:10ch; text-align: center;" value={{educacion.anioFin}} id=Fin{{educacion.id}} placeholder="Año Fin">
+                </li>
+                 <li><input type="text" value="" id=urlDiploma{{educacion.id}} placeholder="URL Diploma/Certificado">
+                <li><textarea value={{educacion.descripcion}} id=educDescrip{{educacion.id}} placeholder="Descripción"></textarea></li>
+                <div><button type="button" id="confirmar" (click)="editarEducacion(educacion,educacion.titulo+educacion.id,educacion.institucion+educacion.id,educacion.urlImg+educacion.id,'inicio'+educacion.id,'Fin'+educacion.id,'educDescrip'+educacion.id,'urlDiploma'+educacion.id)">Confirmar</button></div>
+            </ul>
+            </form>
+        </li>
+    </ul>
+    </div>

@@ -1,0 +1,17 @@
+
+<div class="row">
+    <h1>Educación</h1>
+
+        <div *ngFor="let educacion of listaEducacion" >
+            <div class="col-sm-12 col-md-6 col-lg-4 educItems ">
+
+            <p class="titulo">Titulo: <b>{{educacion.titulo}}</b></p><br>
+            <p class="institucion">Institucion: {{educacion.institucion}}</p><img src="{{educacion.urlImg}}"><br>
+            <p class="periodo">Periodo: ({{educacion.anioInicio}} - {{educacion.anioFin}})</p><br>
+            <p><a href={{educacion.urlDiploma}}>Ver diploma</a></p><br>
+            <p class="descripcion">Descripción: {{educacion.descripcion}}</p>
+            </div>
+        </div>
+
+    
+</div>

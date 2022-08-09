@@ -1,0 +1,55 @@
+
+img{
+    width:100vw;
+}
+#btneditBanner{
+     position: absolute;
+     left: 45vw;
+}
+div{
+    align-items: center;
+}
+input{
+    position: absolute;
+    left:45vw;
+    visibility: hidden;
+}
+#btnedicionBanner{
+    position: absolute;
+    left:55vw;
+    visibility: hidden;
+}
+
+@media screen and (min-width:721px){
+    img{
+        height: 70vh;    
+    }
+  #btneditBanner{
+    top:45vh;
+   }
+   input{
+    top:50vh;
+   }
+   #btnedicionBanner{
+    top:55vh;
+   }
+}
+
+@media screen and (max-width: 720px){
+    img{
+       
+        height: 30vh;   
+    }
+    #btneditBanner{
+        top:25vh;
+    }
+    input{
+        top:20vh;
+        width:20%;
+    }
+    #btnedicionBanner{
+        top:25vh;
+       }
+
+
+}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Banner {\n  constructor(urlBanner, id) {\n    this.urlBanner = urlBanner;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

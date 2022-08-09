@@ -1,0 +1,73 @@
+div {
+    background-color: deepskyblue;
+    padding-top: 2%;
+}
+
+h2,
+h3 {
+    display: inline;
+    margin-right: 1%;
+}
+
+img {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+
+ul {
+    padding-left: 50px;
+    margin: 0%;
+}
+
+h1 {
+    padding-top: 20px;
+    padding-left: 15px;
+    margin-bottom: 0%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+
+
+#titulo {
+    font-size: large;
+}
+
+li div {
+    padding: 0%;
+    margin: 0%;
+}
+
+li {
+    width: 60vw;
+    
+}
+
+button {
+    margin-right: 5px;
+}
+
+form {
+    display: none;
+}
+
+.educItems {
+    
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: aqua;
+    margin-bottom: 3%;
+    margin-left: 1vw;
+}
+p {
+    margin-bottom: 0%;
+    margin-right: 3px;
+    display: inline-block;
+    padding-left: 6%;
+}

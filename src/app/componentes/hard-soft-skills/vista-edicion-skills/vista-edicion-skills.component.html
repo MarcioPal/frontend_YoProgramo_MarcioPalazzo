@@ -1,0 +1,49 @@
+
+<div class="row">
+    <div>
+   <h1>Hard y Soft Skills</h1>
+   <button type="button" class="btnEdicion" id="añadir" (click)="habilitarEdicion('formAgregarSkill',true)" (dblclick)="habilitarEdicion('formAgregarSkill',false)">Añadir</button>
+   <form action="" id="formAgregarSkill">
+     <ul>
+      <li><input name="skillName" type="text" value="" id="nombreSkill" placeholder="Nombre Skill"></li>
+      <li><input name="porcentaje" type="text" value="" id="porcentajeSkill" placeholder="Porcentaje"></li> 
+      <li><input name="URLSkill" type="text" value="" id="imagenSkill" placeholder="URL Imagen Skill" ></li>
+     <button type="button" (click)="agregarSkill()">Confirmar</button>
+ </ul>
+ </form>
+ 
+ </div>
+   
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3" style="text-align:center" *ngFor="let skill of skills"> 
+ <button type="button" class="btnEdicion" id="editar" (click)="habilitarEdicion(skill.skillName,true)" (dblclick)="habilitarEdicion(skill.skillName,false)">Editar</button>
+ <button type="button" class="btnEdicion" id="eliminar" (click)="borrarSkill(skill.id)">Eliminar</button>
+   <circle-progress
+   [percent]="skill.porcentaje"
+   [showUnits]="false"
+   [showSubtitle]="false"
+   [imageSrc]="skill.urlImg"
+   [showImage]="true"
+   [imageHeight]="80"
+   [imageWidth]="80"
+   [radius]="100"
+   [outerStrokeWidth]="16"
+   [innerStrokeWidth]="8"
+   [outerStrokeColor]="'#78C000'"
+   [innerStrokeColor]="'#C7E596'"
+   [animation]="true"
+   [animationDuration]="700"
+ ></circle-progress>
+ <p>{{skill.skillName}}</p>
+
+ <form id={{skill.skillName}}>
+   <ul>
+    <li><input type="text" value={{skill.skillName}} id={{skill.skillName}}{{skill.id}} placeholder="Nombre"></li>
+    <li><input type="text" value={{skill.porcentaje}} id=porcen{{skill.id}} placeholder="Porcentaje"></li>
+    <li><input type="text" value={{skill.urlImg}} id={{skill.urlImg}}{{skill.id}} placeholder="URL imagen" ></li>
+    <li><button type="button" id="confirmar" (click)="editarSkill(skill,skill.skillName+skill.id,'porcen'+skill.id,skill.urlImg+skill.id)"> Confirmar</button></li>
+  </ul>
+  
+ </form>
+
+</div>
+

@@ -1,0 +1,64 @@
+<div>
+
+    <h1 style="margin-bottom:2%">Experiencia Laboral</h1>
+    <button type="button" id="añadir" class="btnEdicion" (click)="habilitarEdicion('añadirItem',true)"
+        (dblclick)="habilitarEdicion('añadirItem',false)">Añadir</button>
+    <form action="" id=añadirItem>
+        <ul>
+            <li><input name="puesto" type="text" value="" id="puesto" placeholder="Puesto"></li>
+            <li><input name="empresa " type="text" value="" id="nombreEmp" placeholder="Nombre empresa"></li>
+            <li><input name="URL" type="text" value="" id="urlImg" placeholder="url imagen empresa"></li>
+            <li><input type="text" style="width:10ch; text-align: center;" value="" id="añoinicio"
+                    placeholder="Año Inicio">
+                <input type="text" style="width:10ch; text-align: center;" value="" id="añoFin" placeholder="Año Fin">
+            </li>
+            <textarea value="" id="descripcion" placeholder="Descripción"></textarea>
+            <button type="button" id="confirmar" (click)="crearExperiencia()">Confirmar</button>
+        </ul>
+    </form>
+
+    <ul>
+        <li  style="margin-bottom:3%" *ngFor="let exp of experiencias">
+
+            <div class="col-sm-12 col-md-6 col-lg-5 expItems ">
+            <p>Puesto: <b>{{exp.puesto}}</b>
+            <p>Empresa: {{exp.nombreEmpresa}} <img src="{{exp.urlImg}}"></p>
+            <p>Periodo: ({{exp.anioInicio}}-{{exp.anioFin}})</p>
+            <p class="descripcion">Descripcion: {{exp.descripcion}}</p>
+            <div style="text-align:center; width: 70%;margin-left: 15%;margin-right: 15%;background-color: aqua;">
+            <button type="button" class="btnEdicion" (click)="habilitarEdicion(exp.puesto,true)"
+                (dblclick)="habilitarEdicion(exp.puesto,false)">Editar</button>
+            <button type="button" class="btnEdicion" (click)="borrarExperiencia(exp.id)">Eliminar</button>
+        </div>
+                
+            
+        </div>
+            <form action="" id={{exp.puesto}}>
+                <ul>
+                    <li><input name="puesto" type="text" value={{exp.puesto}} id={{exp.puesto}}{{exp.id}}
+                            placeholder="Puesto"></li>
+                    <li><input name="empresa " type="text" value={{exp.nombreEmpresa}}
+                            id={{exp.nombreEmpresa}}{{exp.id}} placeholder="Nombre empresa"></li>
+                    <!--le asigno un id a cada item, producto de la concatenacion del valor que contiene cada input y el id de la experiencia para poder identificarlos univocamente cuando llame a la funcion editarExperiencia()-->
+                    <li><input name="URL" type="text" value={{exp.urlImg}} id={{exp.urlImg}}{{exp.id}}
+                            placeholder="url imagen empresa"></li>
+                    <li><input type="text" style="width:10ch; text-align: center;" value={{exp.anioInicio}}
+                            id=inicio{{exp.id}} placeholder="Año Inicio">
+                        <input type="text" style="width:10ch; text-align: center;" value={{exp.anioFin}}
+                            id=fin{{exp.id}} placeholder="Año Fin">
+                    </li>
+                    <li><textarea value={{exp.descripcion}} id={{exp.descripcion}}{{exp.id}}
+                            placeholder="Descripción"></textarea></li>
+                    <div><button type="button" id="confirmar"
+                            (click)="editarExperiencia(exp,exp.puesto+exp.id,exp.nombreEmpresa+exp.id,exp.urlImg+exp.id,'inicio'+exp.id,'fin'+exp.id,exp.descripcion+exp.id)">Confirmar</button>
+                    </div>
+                    <!--los argumentos de editarExperiencia deben ser string por eso no puedo poner exp.anioInicio+expanioFin porque son numericos-->
+                </ul>
+            </form>
+
+
+        </li>
+    </ul>
+
+
+</div>

@@ -1,0 +1,250 @@
+p {
+    margin-bottom: 0;
+}
+
+h1 {
+    margin: 0%;
+    display: inline-block;
+}
+
+
+
+div {
+    background-color: deepskyblue;
+}
+
+
+#acerca {
+
+    padding-left: 19vw;
+    text-align: center;
+    background-color: deepskyblue;
+    padding-bottom: 0%;
+}
+
+img {
+    border-radius: 100%;
+    position: absolute;
+
+
+}
+
+#formAcerca {
+    display: none;
+}
+
+.btnEdicion {
+    visibility: hidden;
+}
+
+@media screen and (min-width: 1600px) {
+    #formPerfil {
+        margin-top: 10px;
+    }
+
+    img {
+        top: 70vh;
+        width: 15vw;
+        height: 15vw;
+        left: 3vw;
+    }
+
+    #nombre {
+        padding-left: 20vw;
+        background-color: deepskyblue;
+        margin: 0;
+        font-weight: bold;
+        color: white;
+        font-size: medium;
+        padding-top: 20px;
+
+    }
+
+    #imgen {
+        display: inline-block;
+        width: auto;
+        margin-top: 5px;
+    }
+
+    textarea {
+        width: 40vw;
+        height: 15vh;
+        margin-top: 5px;
+        ;
+    }
+
+    #btnEditarPerfil {
+        display: block;
+        margin-left: 80%;
+    }
+
+    p {
+        margin-left: 20vw;
+    }
+}
+
+@media screen and (min-width:721px) and (max-width:1599px) {
+    img {
+        top: 70vh;
+        width: 15vw;
+        height: 15vw;
+        left: 3vw;
+    }
+
+    p {
+        padding-left: 18vw;
+        background-color: deepskyblue;
+        margin: 0;
+    }
+
+    #nombre {
+        padding-left: 20vw;
+        background-color: deepskyblue;
+        margin: 0;
+        font-weight: bold;
+        color: white;
+        font-size: medium;
+        padding-top: 20px;
+    }
+
+    textarea {
+        width: 40vw;
+        height: 15vh;
+    }
+
+    #imgen {
+        display: inline-block;
+        width: auto;
+        margin-top: 5px;
+    }
+
+    #formPerfil {
+        margin-top: 10px;
+    }
+
+    #btnEditarPerfil {
+        display: block;
+        margin-left: 70%;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    img {
+        top: 30vh;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 10vw;
+        left: 40vw;
+    }
+
+    #acerca {
+
+        padding-top: 5vh;
+        text-align: center;
+        background-color: deepskyblue;
+        padding-left: 0;
+    }
+
+    #nombre {
+
+        background-color: deepskyblue;
+        margin: 0;
+        font-weight: bold;
+        color: white;
+        font-size: medium;
+        padding-top: 10vw;
+
+
+    }
+
+    #imgen {
+        text-align: center;
+    }
+
+
+    li {
+        list-style: none;
+    }
+
+    #formPerfil {
+        margin-left: 30vw;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    img {
+        top: 65vh;
+        width: 15vw;
+        height: 15vw;
+        left: 3vw;
+    }
+
+}
+
+
+ul {
+    margin: 0%;
+}
+
+#editAcerca {
+    margin: 0%;
+    display: inline-block;
+    margin-right: 5px;
+    width: auto;
+}
+
+@media screen and (max-width: 480px) {
+    textarea {
+        width: 90vw;
+        height: 20vh;
+    }
+
+    li {
+        text-align: center;
+        list-style: none;
+    }
+
+    #formPerfil {
+        margin-left: 20vw;
+    }
+    img{
+        top:35vh;
+        left:35vw;
+        width:35vw;
+        height: 35vw;
+        border-radius: 100%;
+    }
+    #nombre{
+        padding-top: 20vw;
+    }
+}
+
+@media screen and (max-width:300px) {
+    #formPerfil {
+        margin: 0%;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:720px) {
+    textarea {
+        width: 60vw;
+        height: 15vh;
+    }
+}
+
+#formPerfil {
+    display: none;
+    text-align: center;
+
+}
+
+#acerca {
+    padding: 20px;
+}
+
+@media screen and (max-width:720px) {
+    #btnEditarPerfil {
+        text-align: center;
+    }
+}

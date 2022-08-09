@@ -1,0 +1,32 @@
+<div style="background-color:deepskyblue">
+    <div id="imgen">
+        <img src={{persona.urlFoto}}>
+        <p style="text-align: center;"id="nombre">{{persona.nombre}} {{persona.apellido}}<br>{{persona.titulo}}</p>
+        <div id="btnEditarPerfil"><button type="button" class="btnEdicion" (click)="habilitarEdicion('formPerfil', true)" (dblclick)="habilitarEdicion('formPerfil', false)">Editar</button></div>
+    
+    </div>
+    
+    <form id="formPerfil">
+        <ul style="text-align:center">
+         <li><input type="text" value={{persona.nombre}} id="nombrePer"placeholder="Nombre"></li>
+         <li><input type="text" value={{persona.apellido}} id="apellido" placeholder="Apellido"></li>
+         <li><input type="text" value={{persona.titulo}} id="ocupacion" placeholder="Ocupacion"></li>
+         <li><input type="text" value={{persona.urlFoto}} id="urlFotoPerfil"placeholder="URL foto de perfil"></li>
+         <button  (click)="editarPerfil()">Confirmar</button>
+        </ul>
+    </form>
+    </div>
+        
+    
+    <div id="acerca">
+    
+        <h1>Acerca de mí</h1>
+        <div id="editAcerca" style="margin-left:5px;"><button class="btnEdicion" type="button"  (click)="habilitarEdicion('formAcerca',true)" (dblclick)="habilitarEdicion('formAcerca',false)" > Editar</button></div>
+        <p>{{persona.acercaDe}}</p>
+    
+        <form id="formAcerca">
+            <textarea id="acercaDeMi" value={{persona.acercaDe}} placeholder="Descripción"></textarea>
+            <div><button type="button" (click)="editarPerfil()">Confirmar</button></div>
+        </form>
+        
+    </div>

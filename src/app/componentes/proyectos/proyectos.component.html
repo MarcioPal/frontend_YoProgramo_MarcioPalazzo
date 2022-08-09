@@ -1,0 +1,19 @@
+<div class="row">
+
+    <h1>Proyectos realizados</h1>
+
+
+    <div class="contenedor" *ngFor="let proy of proyectos">
+        <div class="col-sm-12 col-md-6 col-lg-4 parte1">
+            <h4 style="margin-left:4.5%;">{{proy.nombreProy}}</h4>
+            <p>Fecha de realización: {{proy.proyAnio}}-{{proy.proyMes}}-{{proy.proyDia}}</p>
+            <p style="margin-left:4%">Descripcion: {{proy.descripcion}}</p>
+            <p style="margin-left:4%;"><a href="{{proy.urlProy}}" style="text-decoration:none; target:blank">Ver en
+                    Github</a></p>
+        </div>
+
+
+    </div>
+
+
+</div>

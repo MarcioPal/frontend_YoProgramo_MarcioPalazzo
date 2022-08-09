@@ -1,0 +1,9 @@
+
+<div>
+    <img src={{banner.urlBanner}}>
+    <button id="btneditBanner" type="button" (click)="habilitarEdicion('editBanner',true)" (dblclick)="habilitarEdicion('editBanner',false)">Editar</button>
+    
+           <input id="editBanner" type="text" value={{banner.urlBanner}} placeholder="URL Banner">
+            <li id="btnedicionBanner"><button (click)="editarBanner()">Confirmar</button>
+    </div>
+

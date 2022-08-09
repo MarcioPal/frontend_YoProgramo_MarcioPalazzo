@@ -1,0 +1,16 @@
+#logoAP{
+    width: 15%;
+}
+@media  screen and (max-width:480px) {
+    #logoAP{
+        width:35%;
+        display:block;
+        margin-left: 35vw;
+    }
+}
+@media screen and (min-width:481px) {
+#logoAP{
+   margin-right: 55%;
+}
+    
+}

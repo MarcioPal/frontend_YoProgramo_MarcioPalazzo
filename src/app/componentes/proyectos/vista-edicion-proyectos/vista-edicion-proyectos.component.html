@@ -1,0 +1,48 @@
+<div class="row">
+    
+    <h1>Proyectos realizados</h1>
+    <button type="button" style="width:50px" id="añadir" (click)="habilitarEdicion('formNuevoProy',true)" (dblclick)="habilitarEdicion('formNuevoProy',false)">Añadir</button>
+
+    <form id="formNuevoProy">
+        <ul>
+         <li><input type="text" value="" id="nombreProy" placeholder="Nombre del proyecto"></li>
+         <li><input type="text" value="" id="urlImgProy" placeholder="URL proyecto en GitHub"></li>
+         <li><input type="text" style="width:5.4ch; text-align: center;" id="anioProy" value=""  placeholder="AAAA">
+             <input type="text" style=" width:3.6ch; text-align: center;" id="mesProy" value="" placeholder="MM">
+             <input type="text" style="width: 3.5ch; text-align: center;" id="diaProy" value="" placeholder="DD">
+        </li>
+        <textarea value="" id ="descripProy" placeholder="Descripción"></textarea>
+        <div><button type="button" (click)="agregarProyecto()" >Confirmar</button></div>
+    </ul>
+    </form>
+    
+    <div class="contenedor" *ngFor="let proy of proyectos">
+        <div class="col-sm-12 col-md-6 col-lg-5 parte1">
+            <h4>{{proy.nombreProy}}</h4>
+            <p>Fecha de realización: {{proy.proyAnio}}-{{proy.proyMes}}-{{proy.proyDia}}</p>
+            <p>{{proy.descripcion}}</p>
+            <p style="margin-left:4%;"><a href="{{proy.urlProy}}" style="text-decoration:none; target:blank">Ver en Github</a></p>
+            <div style="text-align:center; width: 70%;margin-left: 15%;margin-right: 15%;background-color: aqua;">
+            <button type="button" class="btnEdicion" (click)="habilitarEdicion(proy.nombreProy,true)" (dblclick)="habilitarEdicion(proy.nombreProy,false)">Editar</button>
+            <button type="button" class="btnEdicion" (click)="eliminarProyecto(proy.id)">Eliminar</button>
+            </div>
+        </div>
+
+        <form id={{proy.nombreProy}}>
+            <ul>
+             <li><input type="text" value={{proy.nombreProy}} id={{proy.nombreProy}} id={{proy.nombreProy}}{{proy.id}} placeholder="Nombre"></li>
+             <li><input type="text" value={{proy.urlProy}} id={{proy.urlProy}}{{proy.id}} placeholder="URL proyecto en GitHub"></li>
+             <li><input type="text" style="width:5.4ch; text-align: center;" id=anio{{proy.id}} value={{proy.proyAnio}}  placeholder="AAAA">
+                 <input type="text" style=" width:3.6ch; text-align: center;" id=mes{{proy.id}} value={{proy.proyMes}} placeholder="MM">
+                 <input type="text" style="width: 3.5ch; text-align: center;" id=dia{{proy.id}} value={{proy.proyDia}} placeholder="DD">
+            </li>
+            <textarea value={{proy.descripcion}} id =desc{{proy.id}} placeholder="Descripción"></textarea>
+            <div><button type="button" (click)="editarProyecto(proy,proy.nombreProy+proy.id,proy.urlProy+proy.id,'anio'+proy.id,'mes'+proy.id,'dia'+proy.id,'desc'+proy.id)" >Confirmar</button></div>
+        </ul>
+        </form>
+
+    </div>
+    
+
+</div>
+
